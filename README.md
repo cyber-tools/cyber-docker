@@ -10,5 +10,14 @@
 
 全局命令方式:
 ```bash
+Usage: cyber-docker @cyber-tools/cyber-docker
 
+Options:
+  -c,--config <string>  配置文件路径 (default: "./.defaultrc.js")
+  -V, --version         output the version number
+  -h, --help            display help for command
+
+Commands:
+  create                创建Docker构筑相关的文件和文件夹
+  help [command]        display help for command
 ```
