@@ -12,7 +12,7 @@ export async function replace_publish_file({ REGISTRY, IMAGE_NAME }) {
 
   const prod_publish_scripts_content = await promisify(fs.readFile)(prod_publish_scripts_file_path, "utf-8");
   const after_replace_prod_content = prod_publish_scripts_content
-    .replace("PROD_IMAGE_NAME_PLACEHOLDER", `prod-${IMAGE_NAME}`)
+    .replace("PROD_IMAGE_NAME_PLACEHOLDER", `${IMAGE_NAME}`)
     .replace("REGISTRY/PROD_IMAGE_NAME_PLACEHOLDER", `${REGISTRY}/${IMAGE_NAME}`);
   await promisify(fs.writeFile)(prod_publish_scripts_file_path, after_replace_prod_content, "utf-8");
 };
