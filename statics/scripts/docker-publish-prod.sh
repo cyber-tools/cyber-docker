@@ -4,8 +4,8 @@ PROJECT_FOLDER="$(cd $SHELL_FOLDER; cd ../../; pwd)";
 IMAGE_NAME="PROD_IMAGE_NAME_PLACEHOLDER";
 TAGD_PROJECT_NAME="REGISTRY/PROD_IMAGE_NAME_PLACEHOLDER";
 
-docker rmi -f $PROJECT_NAME;
-docker rmi -f $PROJECT_NAME $TAGD_PROJECT_NAME;
-docker build -t $PROJECT_NAME .;
-docker tag $PROJECT_NAME "$TAGD_PROJECT_NAME:latest";
+docker rmi -f $IMAGE_NAME;
+docker rmi -f $IMAGE_NAME $TAGD_PROJECT_NAME;
+docker build -t $IMAGE_NAME .;
+docker tag $IMAGE_NAME "$TAGD_PROJECT_NAME:latest";
 docker push $TAGD_PROJECT_NAME;
