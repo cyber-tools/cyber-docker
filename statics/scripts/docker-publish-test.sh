@@ -8,4 +8,4 @@ docker rmi -f $IMAGE_NAME;
 docker rmi -f $IMAGE_NAME $TAGD_PROJECT_NAME;
 docker build -t $IMAGE_NAME .;
 docker tag $IMAGE_NAME "$TAGD_PROJECT_NAME:latest";
-docker push $IMAGE_NAME;
+docker push $TAGD_PROJECT_NAME;
